@@ -31,6 +31,7 @@ function createFigure(category, game) {
       ? `${game.playTime}h / ${game.localization ? "한글" : ""}`
       : `${game.playTime}h`;
   } else if (category == "editorsPicks") {
+    figInfoElement.textContent = `다운로드 : ${game.count_play}+`;
   } else if (category == "intwohundreds") {
     figInfoElement.textContent = `최고 순위 : ${Math.min(
       ...game.rank.filter((x) => x != null)
