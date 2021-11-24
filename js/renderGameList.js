@@ -8,15 +8,9 @@ import { GAME_LIST } from "./data.js";
   const contentsSection = document.getElementById("contents");
 
   const figureElementList = webzinGameList.map((game) => createFigure(game));
-  figureElementList.forEach( function appendLoadEventToImgElement ( fig )
-  {
-    const imgNode = fig.getElementsByTagName( "img" );
-    const imgElement = imgNode[ 0 ];
-    imgElement.addEventListener( "load", function imgLoaded ()
-    {
-      contentsSection.appendChild( fig );
-    });
-  });
+  for (const fig of figureElementList) {
+    contentsSection.appendChild(fig);
+  }
 })();
 
 function createFigure(game) {
