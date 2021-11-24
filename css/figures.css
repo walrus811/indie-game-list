@@ -85,9 +85,7 @@ p {
     flex-flow: row wrap;
     justify-content: center;
   }
-  figure img {
-    max-width: 440px;
-  }
+  
   figure h2,
   p {
     font-size: 1.2rem;
