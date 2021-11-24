@@ -1,19 +1,15 @@
 /** @format */
 
-import { GAME_LIST } from "./data.js";
-
-(function render() {
-  const webzinGameList = GAME_LIST.webzin;
-
+export function renderFigureList(dataKey, dataList) {
   const contentsSection = document.getElementById("contents");
 
-  const figureElementList = webzinGameList.map((game) => createFigure(game));
+  const figureElementList = dataList.map((game) => createFigure(dataKey, game));
   for (const fig of figureElementList) {
     contentsSection.appendChild(fig);
   }
-})();
+}
 
-function createFigure(game) {
+function createFigure(category, game) {
   var figureElement = document.createElement("figure");
   var linkElement = document.createElement("a");
   linkElement.href = `https://www.youtube.com/results?search_query=${encodeURI(
@@ -30,10 +26,16 @@ function createFigure(game) {
 
   var figInfoElement = document.createElement("p");
   figInfoElement.className = "fig-info";
-  figInfoElement.textContent = game.localization
-    ? `${game.playTime}h / ${game.localization ? "한글" : ""}`
-    : `${game.playTime}h`;
-
+  if (category == "webzin") {
+    figInfoElement.textContent = game.localization
+      ? `${game.playTime}h / ${game.localization ? "한글" : ""}`
+      : `${game.playTime}h`;
+  } else if (category == "editorsPicks") {
+  } else if (category == "intwohundreds") {
+    figInfoElement.textContent = `최고 순위 : ${Math.min(
+      ...game.rank.filter((x) => x != null)
+    )}`;
+  }
   var figCaptionElement = document.createElement("figcaption");
   var gameNameElement = document.createElement("h2");
   gameNameElement.textContent = game.name;
