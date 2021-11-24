@@ -240,26 +240,38 @@ export const GAME_LIST = {
     {
       name: "창술사 키우기",
       rank: [null, null, null, null, 75],
+      genre: "방치형",
+      path: "../img/intwohundreds/lance.jpg",
     },
     {
       name: "사신키우기 온라인",
       rank: [56, 72, 71, 71, 76],
+      genre: "방치형",
+      path: "../img/intwohundreds/reaper.jpg",
     },
     {
       name: "슬레이어 키우기",
       rank: [130, 200, 34, 57, 92],
+      genre: "방치형",
+      path: "../img/intwohundreds/slayer.jpg",
     },
     {
       name: "마피아42",
       rank: [100, 108, 115, 73, 112],
+      genre: "전략, 시뮬레이션",
+      path: "../img/intwohundreds/mafia.jpg",
     },
     {
-      name: "창술사 키우기",
+      name: "임모탈 키우기",
       rank: [null, null, null, 114, 144],
+      genre: "방치형",
+      path: "../img/intwohundreds/immotal.jpg",
     },
     {
       name: "좀비 고등학교",
       rank: [173, 151, 133, 148, 181],
+      genre: "액션",
+      path: "../img/intwohundreds/zombie.jpg",
     },
   ],
 };
