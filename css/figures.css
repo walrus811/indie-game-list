@@ -56,7 +56,8 @@ figure .fig-info {
   background-color: black;
   color: white;
   opacity: 0.7;
-  padding: 0.5rem;
+  padding: 0.2rem;
+  font-size: 0.8rem;
 }
 
 figure figcaption {
@@ -85,7 +86,7 @@ p {
     flex-flow: row wrap;
     justify-content: center;
   }
-  
+
   figure h2,
   p {
     font-size: 1.2rem;
