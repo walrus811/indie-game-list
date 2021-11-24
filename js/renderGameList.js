@@ -6,17 +6,21 @@ import { GAME_LIST } from "./data.js";
   const webzinGameList = GAME_LIST.webzin;
 
   const contentsSection = document.getElementById("contents");
-  for (const game of webzinGameList) {
-    const figure = createFigure(game);
-    contentsSection.appendChild(figure);
-  }
 
-  console.log(webzinGameList);
+  const figureElementList = webzinGameList.map((game) => createFigure(game));
+  figureElementList.forEach( function appendLoadEventToImgElement ( fig )
+  {
+    const imgNode = fig.getElementsByTagName( "img" );
+    const imgElement = imgNode[ 0 ];
+    imgElement.addEventListener( "load", function imgLoaded ()
+    {
+      contentsSection.appendChild( fig );
+    });
+  });
 })();
 
 function createFigure(game) {
   var figureElement = document.createElement("figure");
-
   var linkElement = document.createElement("a");
   linkElement.href = `https://www.youtube.com/results?search_query=${encodeURI(
     game.name
