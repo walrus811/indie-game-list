@@ -4,9 +4,10 @@ const DEFAULT_NONE_LAZY_COUNT = 3;
 
 export function renderFigureList(dataKey, dataList) {
   const contentsSection = document.getElementById("contents");
-  const figureElementList = dataList.map( ( game,index ) => createFigure( dataKey, game, DEFAULT_NONE_LAZY_COUNT,  index) );
-  for ( const fig of figureElementList )
-  {
+  const figureElementList = dataList.map((game, index) =>
+    createFigure(dataKey, game, DEFAULT_NONE_LAZY_COUNT, index)
+  );
+  for (const fig of figureElementList) {
     contentsSection.appendChild(fig);
   }
 }
@@ -18,22 +19,20 @@ function createFigure(category, game, noneLazyCount, index) {
     game.name
   )}`;
   linkElement.target = "_blank";
-
+  linkElement.rel = "noopener noreferrer";
   var youtubeIconElement = document.createElement("span");
   youtubeIconElement.className = "fab fa-youtube youtube-icon";
 
-  var imgElement = document.createElement( "img" );
-  var pathSplittedList = game.path.split( "/" );
-  pathSplittedList[ pathSplittedList.length ] = pathSplittedList[ pathSplittedList.length - 1 ];
-  pathSplittedList[ pathSplittedList.length - 2 ] = "lazy";
+  var imgElement = document.createElement("img");
+  var pathSplittedList = game.path.split("/");
+  pathSplittedList[pathSplittedList.length] =
+    pathSplittedList[pathSplittedList.length - 1];
+  pathSplittedList[pathSplittedList.length - 2] = "lazy";
 
-  if ( noneLazyCount > index )
-  {
+  if (noneLazyCount > index) {
     imgElement.src = game.path;
-  }
-  else
-  {
-    imgElement.src = pathSplittedList.join( "/" );
+  } else {
+    imgElement.src = pathSplittedList.join("/");
     imgElement.dataset.src = game.path;
     imgElement.classList = "lazy";
   }
