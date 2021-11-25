@@ -78,6 +78,27 @@ nav a:hover {
   color: var(--font-color-reverse);
 }
 
+#description{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#description p{
+  margin : 0;
+  padding : 0;
+}
+
+#description h4{
+  margin-top : 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.index-link{
+  text-decoration: none;
+  color : var(--font-color)
+}
+
 .hidden {
   visibility: hidden;
 }
