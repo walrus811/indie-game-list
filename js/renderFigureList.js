@@ -45,9 +45,7 @@ function createFigure(category, game, noneLazyCount, index) {
       ? `${game.playTime}h / ${game.localization ? "한글" : ""}`
       : `${game.playTime}h`;
   } else if (category == "editorsPicks") {
-    figInfoElement.textContent = `다운로드 : ${withUnitString(
-      game.count_play
-    )}+`;
+    figInfoElement.textContent = `다운 : ${withUnitString(game.count_play)}+`;
   } else if (category == "intwohundreds") {
     figInfoElement.textContent = `최고 : ${Math.min(
       ...game.rank.filter((x) => x != null)
