@@ -2,8 +2,8 @@
 
 # 인디 게임 리스트(No.1)
 
-![데스크탑]]("./main.webp")
-![모바일]("./mobile.webp")
+![데스크탑](./main.webp)
+![모바일](./mobile.webp)
 
 [페이지 링크](https://walrus811.github.io/indie-game-list/)
 
