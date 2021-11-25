@@ -5,5 +5,6 @@ import { renderFigureList } from "./renderFigureList.js";
 
 (function init() {
   const dataKey = "webzin";
-  renderFigureList(dataKey, GAME_LIST[dataKey]);
+  renderFigureList( dataKey, GAME_LIST[ dataKey ] );
+  
 })();
