@@ -49,9 +49,9 @@ function createFigure(category, game, noneLazyCount, index) {
       game.count_play
     )}+`;
   } else if (category == "intwohundreds") {
-    figInfoElement.textContent = `최고 순위 : ${Math.min(
+    figInfoElement.textContent = `최고 : ${Math.min(
       ...game.rank.filter((x) => x != null)
-    )}`;
+    )}위`;
   }
   var figCaptionElement = document.createElement("figcaption");
   var gameNameElement = document.createElement("h2");
