@@ -15,7 +15,7 @@ figure a {
 figure .youtube-icon {
   position: absolute;
   font-size: 4rem;
-  opacity: 1;
+  opacity: 0;
   color: red;
   z-index: -1;
   filter: drop-shadow(3px 3px 3px black);
